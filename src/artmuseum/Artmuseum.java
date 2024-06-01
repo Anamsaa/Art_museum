@@ -7,7 +7,7 @@ public class Artmuseum {
 
     public static void main(String[] args) {
      
-        //Menú principal 
+        // - - - - - - - - - - - Menú principal - - - - - - - - - - - - //
         
         Scanner sc = new Scanner(System.in);
         MenuArtistas menuArtistas = new MenuArtistas();
@@ -26,7 +26,7 @@ public class Artmuseum {
 
             switch (opcion) {
                 case 1 -> menuArtistas.iniciar();
-                case 2 -> menuObras.iniciar();  // Método iniciar() en MenuObras
+                case 2 -> menuObras.iniciar();
                 case 3 -> {
                     System.out.println("Saliendo...");
                     return;

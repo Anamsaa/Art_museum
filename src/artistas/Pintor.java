@@ -29,7 +29,9 @@ public class Pintor extends Artista {
 
     @Override
     public String toString() {
-        return "Nombre del pintor: " + getNombre() + "\n" + "Nacionalidad: " + getNacionalidad() + "\n" + "Estilo predominante: " + estiloPredominante + "\n";
+        return "Nombre del pintor: " + getNombre() + "\n" 
+                + "Nacionalidad: " + getNacionalidad() + "\n" 
+                + "Estilo predominante: " + estiloPredominante + "\n";
     }
 }
 
