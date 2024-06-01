@@ -1,26 +1,30 @@
 package artistas;
 
-import java.util.*; 
-import obradearte.*; 
+import obradearte.ObraDeArte;
+import java.util.ArrayList;
 
 public class Pintor extends Artista {
-    
-    //Atributos
+    // Atributos
     private String estiloPredominante;
-    
-    public Pintor(){
-    }
-    
-   
 
-    //Getters y Setters 
-    public String getEstiloPredominante(){
+    // Constructor vacío
+    public Pintor() {
+    }
+
+    // Constructor con parámetros
+    public Pintor(String nombre, String nacionalidad, String estiloPredominante) {
+        super(nombre, nacionalidad, new ArrayList<ObraDeArte>());
+        this.estiloPredominante = estiloPredominante;
+    }
+
+    // Getters y Setters 
+    public String getEstiloPredominante() {
         return estiloPredominante;
     }
     
     @Override
     public String getTipo() {
-       return "Pintor";
+        return "Pintor";
     }
 
     @Override
@@ -28,3 +32,4 @@ public class Pintor extends Artista {
         return "Nombre del pintor: " + getNombre() + "\n" + "Nacionalidad: " + getNacionalidad() + "\n" + "Estilo predominante: " + estiloPredominante + "\n";
     }
 }
+

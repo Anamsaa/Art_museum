@@ -1,8 +1,8 @@
 package menu;
 
 import java.util.*; 
-import artista.*; 
-import artistas.Pintor;
+import artistas.*; 
+
 
 public class MenuArtistas implements MenuActions {
     
@@ -15,13 +15,13 @@ public class MenuArtistas implements MenuActions {
 
     public void iniciar() {
         while (true) {
-            System.out.println("\n--- Menú de Artistas ---");
+            System.out.println("\n--- Menu de Artistas ---");
             System.out.println("1. Agregar Artista");
             System.out.println("2. Listar Artistas");
             System.out.println("3. Modificar Artista");
             System.out.println("4. Eliminar Artista");
             System.out.println("5. Buscar Artista");
-            System.out.println("6. Volver al Menú Principal");
+            System.out.println("6. Volver al Menu Principal");
             System.out.print("Elige una opción: ");
             
             int opcion = sc.nextInt();
@@ -36,7 +36,7 @@ public class MenuArtistas implements MenuActions {
                 case 6 -> {
                     return;
                 }
-                default -> System.out.println("Opción no válida. Inténtalo de nuevo.");
+                default -> System.out.println("Opción no valida. Intentalo de nuevo.");
             }
         }
     }
@@ -48,7 +48,8 @@ public class MenuArtistas implements MenuActions {
         String nombre = sc.nextLine();
         System.out.print("Nacionalidad del artista: ");
         String nacionalidad = sc.nextLine();
-        System.out.println("Tipo de artista (1. Escultor, 2. Fotógrafo, 3. Pintor): ");
+        System.out.println("Ingrese un numero");
+        System.out.println("Tipo de artista (1. Escultor, 2. Fotografo, 3. Pintor): ");
         int tipo = sc.nextInt();
         sc.nextLine();
         
@@ -66,9 +67,9 @@ public class MenuArtistas implements MenuActions {
                 nuevoArtista = new Fotografo(nombre, nacionalidad, tipoFotografia);
             }
             case 3 -> {
-                System.out.println("Estilo predominante: ");
-                String estiloPredominante = sc.nextLine(); 
-                nuevoArtista = new Pintor();
+                System.out.print("Estilo Predominante: ");
+                String estiloPredominante = sc.nextLine();
+                nuevoArtista = new Pintor(nombre, nacionalidad, estiloPredominante);
             }
             default -> {
                 System.out.println("Tipo de artista no válido. Inténtalo de nuevo.");
