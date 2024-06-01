@@ -72,7 +72,7 @@ public class MenuArtistas implements MenuActions {
                 nuevoArtista = new Pintor(nombre, nacionalidad, estiloPredominante);
             }
             default -> {
-                System.out.println("Tipo de artista no válido. Inténtalo de nuevo.");
+                System.out.println("Tipo de artista no valido. Intentalo de nuevo.");
                 return;
             }
         }

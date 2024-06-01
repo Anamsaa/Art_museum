@@ -11,14 +11,14 @@ public class MenuObrasDeArte implements MenuActions {
 
     public void iniciar() {
         while (true) {
-            System.out.println("\n--- Menú de Obras de Arte ---");
+            System.out.println("\n--- Menu de Obras de Arte ---");
             System.out.println("1. Agregar Obra de Arte");
             System.out.println("2. Listar Obras de Arte");
             System.out.println("3. Modificar Obra de Arte");
             System.out.println("4. Eliminar Obra de Arte");
             System.out.println("5. Buscar Obra de Arte");
-            System.out.println("6. Volver al Menú Principal");
-            System.out.print("Elige una opción: ");
+            System.out.println("6. Volver al Menu Principal");
+            System.out.print("Elige una opcion: ");
 
             int opcion = sc.nextInt();
             sc.nextLine();
@@ -32,7 +32,7 @@ public class MenuObrasDeArte implements MenuActions {
                 case 6 -> {
                     return;
                 }
-                default -> System.out.println("Opción no válida. Inténtalo de nuevo.");
+                default -> System.out.println("Opcion no valida. Intentalo de nuevo.");
             }
         }
     }
@@ -47,7 +47,7 @@ public class MenuObrasDeArte implements MenuActions {
         System.out.print("Año: ");
         int año = sc.nextInt();
         sc.nextLine();
-
+        System.out.println("Introduzca un numero: ");
         System.out.println("Tipo de obra (1. Pintura, 2. Fotografía, 3. Escultura): ");
         int tipo = sc.nextInt();
         sc.nextLine();
@@ -62,9 +62,9 @@ public class MenuObrasDeArte implements MenuActions {
                 nuevaObra = new Pintura(nombre, artista, año, altura, anchura);
             }
             case 2 -> {
-                System.out.print("Altura de la fotografía: ");
+                System.out.print("Altura de la fotografia: ");
                 double altura = sc.nextDouble();
-                System.out.print("Anchura de la fotografía: ");
+                System.out.print("Anchura de la fotografia: ");
                 double anchura = sc.nextDouble();
                 nuevaObra = new Fotografia(nombre, artista, año, altura, anchura);
             }
@@ -77,7 +77,7 @@ public class MenuObrasDeArte implements MenuActions {
                 double profundidad = sc.nextDouble();
                 nuevaObra = new Escultura(nombre, artista, año, altura, anchura, profundidad);
             }
-            default -> System.out.println("Tipo de obra no válido.");
+            default -> System.out.println("Tipo de obra no valido.");
         }
 
         if (nuevaObra != null) {
