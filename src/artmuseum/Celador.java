@@ -1,26 +1,24 @@
 package artmuseum;
 
-import java.util.*; 
+import java.util.HashSet;
+import java.util.Set;
 
 public class Celador {
     
-    int contadorId = 0;
+    private static int contadorId = 0;
     private String nombre; 
-    private static Set<String> idCeladores = new HashSet<>(); 
     private int idCelador;
+    private static Set<Integer> idCeladores = new HashSet<>();
+    private boolean alarmaActivada = false;
     
-    //Constructor vacio 
-    public Celador(){
-    }
-    
-    //Constructor con parámetros
+    // Constructor con parámetros
     public Celador(String nombre){
         this.nombre = nombre; 
-        this.idCelador = contadorId++; 
+        this.idCelador = ++contadorId; 
+        idCeladores.add(idCelador);
     }
     
-    //Getters y Setters 
-    
+    // Getters
     public String getNombre(){
         return nombre;
     }
@@ -29,14 +27,20 @@ public class Celador {
         return idCelador;
     }
     
+    // Métodos de alarma
     
-    //Métodos propios
+    public void monitorearActividad(Visitante visitante){
+        if(visitante.esActoVandalico()){
+            activarAlarma();
+        }
+    }
+    
     public void activarAlarma(){
-        System.out.println("EMERGENCIA. Alarma activada por: " + nombre);
+        System.out.println("¡EMERGENCIA! Alarma activada por Celador " + nombre);
+        alarmaActivada = true;
     }
     
     public void desactivarAlarma(){
-        System.out.println("Alarma desactivada. Ha pasado el peligro");
+        System.out.println("Alarma desactivada. Peligro mitigado.");
     }
-    
 }

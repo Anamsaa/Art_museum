@@ -34,5 +34,8 @@ public class Artmuseum {
                 default -> System.out.println("Opcion no valida. Intentalo de nuevo.");
             }
         }
+        
+        
+        //- - - - - - - - - - -  Pruebas del celador - - - - - - - - - - - -//
     }
 }
