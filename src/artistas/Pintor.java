@@ -4,19 +4,26 @@ import java.util.*;
 import obradearte.*; 
 
 public class Pintor extends Artista {
+    
     //Atributos
     private String estiloPredominante;
     
-    //Constructor vacio
     public Pintor(){
+ 
     }
     
-    //Constructor con parámetros 
-    public Pintor(String nombre, String nacionalidad, String estiloPredominante){
-        super(nombre, nacionalidad, new ArrayList<ObraDeArte>()); 
+    //Constructor con parámetros
+    public Pintor(String nombre, String nacionalidad, String estiloPredominante) {
+        this(nombre, nacionalidad, estiloPredominante);
+    }
+
+    //Constructor con parámetros
+    public Pintor(String nombre, String nacionalidad, String estiloPredominante) {
+        super(nombre, nacionalidad, new ArrayList<ObraDeArte>());
         this.estiloPredominante = estiloPredominante;
     }
-    
+   
+
     //Getters y Setters 
     public String getEstiloPredominante(){
         return estiloPredominante;

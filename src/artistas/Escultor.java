@@ -3,14 +3,13 @@ package artistas;
 import java.util.*; 
 import obradearte.*; 
 
-
 public class Escultor extends Artista {
 
+    //Atributos
     private String materialPreferido;
     
     //Constructores 
     public Escultor(){
-      super();  
     }
     
     public Escultor(String nombre, String nacionalidad, String materialPreferido){
