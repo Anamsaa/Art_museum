@@ -9,19 +9,8 @@ public class Pintor extends Artista {
     private String estiloPredominante;
     
     public Pintor(){
- 
     }
     
-    //Constructor con parámetros
-    public Pintor(String nombre, String nacionalidad, String estiloPredominante) {
-        this(nombre, nacionalidad, estiloPredominante);
-    }
-
-    //Constructor con parámetros
-    public Pintor(String nombre, String nacionalidad, String estiloPredominante) {
-        super(nombre, nacionalidad, new ArrayList<ObraDeArte>());
-        this.estiloPredominante = estiloPredominante;
-    }
    
 
     //Getters y Setters 
