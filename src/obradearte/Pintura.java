@@ -23,8 +23,10 @@ public class Pintura extends ObraDeArte {
 
     @Override
     public String toString() {
-        return "Nombre: " + getNombre() + "\n" + "Artista: " + getArtista() 
-                + "\n" + "Año: " + getAño() + "\n" + "Tamaño: " + calcularDimensiones();
+        return "Nombre: " + getNombre() 
+                + "\n" + "Artista: " + getArtista() 
+                + "\n" + "Año: " + getAño() 
+                + "\n" + "Tamaño: " + calcularDimensiones();
     }
 
     @Override

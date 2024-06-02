@@ -1,13 +1,15 @@
 package artmuseum;
 
 import excepciones.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import persona.*;
 import menu.*; 
 import java.util.*; 
 
-public class Artmuseum {
+public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
      
         // - - - - - - - - - - - Menú principal - - - - - - - - - - - - //
         
@@ -21,7 +23,8 @@ public class Artmuseum {
             System.out.println("1. Menu de Artistas");
             System.out.println("2. Menu de Obras de Arte");
             System.out.println("3. Caso Celador");
-            System.out.println("4. Salir");
+            System.out.println("4. Invitacion al Museo");
+            System.out.println("5. Salir");
             System.out.print("Elige una opcion: ");
 
             int opcion = comprobarInt();
@@ -32,15 +35,17 @@ public class Artmuseum {
                 case 1 -> menuArtistas.iniciar();
                 case 2 -> menuObras.iniciar();
                 case 3 -> probarCelador();
-                case 4 -> {
+                case 4 -> leerArchivo("C:\\Users\\34642\\Documents\\NetBeansProjects\\artmuseum\\src\\artmuseum\\Invitacion.txt");
+                case 5 -> {
                     System.out.println("Saliendo...");
                     return;
                 }
                 default -> System.out.println("Opcion no valida. Intentalo de nuevo.");
             }
-        }   
+        } 
     }
     
+    //- - - - - - - - - - -  Tratamiento de excepciones - - - - - - - - - - - -//
     static int comprobarInt(){
         Scanner sc = new Scanner(System.in);
         int num = 0; 
@@ -49,7 +54,7 @@ public class Artmuseum {
             try{
                 num = sc.nextInt();
                 sc.nextLine(); 
-                if(num < 1 || num > 4) throw new NotFoundException();
+                if(num < 1 || num > 5) throw new NotFoundException();
                 valido = true;
             }catch(InputMismatchException e){
                 System.err.println("Inserte un numero valido");
@@ -68,13 +73,30 @@ public class Artmuseum {
     //- - - - - - - - - - -  Pruebas del celador - - - - - - - - - - - -//
     
     public static void probarCelador(){
-        Celador celador = new Celador("Juan");
-        Visitante visitante = new Visitante("Pedro", 25);
+        Celador celador = new Celador("Maximo");
+        Visitante visitante = new Visitante("Yesua", 23);
 
-        // El visitante realiza un acto vandálico
         visitante.lanzarSopaDeTomate();
-
-        // El celador monitorea la actividad del visitante
         celador.monitorearActividad(visitante);
     }
+    
+    
+    //- - - - - - - - - - -  Prueba de ficheros - - - - - - - - - - - -//
+    public static void leerArchivo(String rutaArchivo) {
+        try {
+            File archivo = new File(rutaArchivo);
+            Scanner sc = new Scanner(archivo);
+            
+            System.out.println("Contenido del archivo " + rutaArchivo + ":");
+            while (sc.hasNextLine()) {
+                String linea = sc.nextLine();
+                System.out.println(linea);
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("El archivo " + rutaArchivo + " no se encuentra.");
+            e.printStackTrace();
+        }
+    }
+ 
 }
