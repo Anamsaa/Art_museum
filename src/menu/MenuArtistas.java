@@ -1,7 +1,7 @@
 package menu;
 
+import persona.*;
 import java.util.*; 
-import artistas.*; 
 
 
 public class MenuArtistas implements MenuActions {

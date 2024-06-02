@@ -1,25 +1,20 @@
-package artmuseum;
+package persona;
 
-public class Visitante {
+public class Visitante extends Persona {
     
-    private static int contadorId = 0; 
-    private String nombre;
+    private static int contadorId = 0;
     private int edad; 
     private int idVisitante;
     private boolean actoVandalico = false;
     
     // Constructor con parámetros
     public Visitante(String nombre, int edad){
-        this.nombre = nombre; 
+        super (nombre);
         this.edad = edad; 
         this.idVisitante = ++contadorId;
     }
     
-    // Getters
-    public String getNombre(){
-        return nombre;
-    }
-    
+    // Getters y Setters 
     public int getEdad() {
         return edad;
     }
@@ -43,5 +38,10 @@ public class Visitante {
     
     public boolean esActoVandalico(){
         return actoVandalico;
+    }
+
+    @Override
+    public String toString() {
+        return "Visitante Nº: " + idVisitante  + "\n Edad: "+ edad;
     }
 }

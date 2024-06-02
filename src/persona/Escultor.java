@@ -1,4 +1,4 @@
-package artistas;
+package persona;
 
 import java.util.*; 
 import obradearte.*; 

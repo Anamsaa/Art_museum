@@ -1,4 +1,4 @@
-package artistas;
+package persona;
 
 import obradearte.ObraDeArte;
 import java.util.ArrayList;
