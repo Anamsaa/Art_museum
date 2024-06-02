@@ -30,7 +30,7 @@ public class Visitante extends Persona {
         actoVandalico = true;
     }
     
-    public void hacerGraffiti(Celador celador){
+    public void hacerGraffiti(){
         System.out.println("Visitante Nº " + idVisitante 
                 + " ha hecho un graffiti en una obra de arte.");
         actoVandalico = true;

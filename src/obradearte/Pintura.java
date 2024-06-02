@@ -26,7 +26,8 @@ public class Pintura extends ObraDeArte {
         return "Nombre: " + getNombre() 
                 + "\n" + "Artista: " + getArtista() 
                 + "\n" + "Año: " + getAño() 
-                + "\n" + "Tamaño: " + calcularDimensiones();
+                + "\n" + "Tamaño: " + calcularDimensiones()
+                + "\n" + "Tipo: " + getTipo();
     }
 
     @Override

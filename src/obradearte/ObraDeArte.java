@@ -44,7 +44,6 @@ public abstract class ObraDeArte {
         this.año = año; 
     }
     
-    
     //Métodos abstractos 
     //Método que me permite calcular las dimensiones de cada obra de Arte
     public abstract double calcularDimensiones(); 
