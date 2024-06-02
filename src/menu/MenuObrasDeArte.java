@@ -17,7 +17,8 @@ public class MenuObrasDeArte implements MenuActions {
             System.out.println("3. Modificar Obra de Arte");
             System.out.println("4. Eliminar Obra de Arte");
             System.out.println("5. Buscar Obra de Arte");
-            System.out.println("6. Volver al Menu Principal");
+            System.out.println("6. Calcular antiguedad de la Obra de Arte");
+            System.out.println("7. Volver al Menu Principal");
             System.out.print("Elige una opcion: ");
 
             int opcion = sc.nextInt();
@@ -29,14 +30,34 @@ public class MenuObrasDeArte implements MenuActions {
                 case 3 -> modificar();
                 case 4 -> eliminar();
                 case 5 -> buscar();
-                case 6 -> {
+                case 6 -> calcularAntiguedad();
+                case 7 -> {
                     return;
                 }
                 default -> System.out.println("Opcion no valida. Intentalo de nuevo.");
             }
         }
     }
-
+    
+    
+    public void calcularAntiguedad(){
+        
+        System.out.println("Calcule la antiguedad de una obra de arte: ");
+        listar();
+        System.out.print("Introduce el ID de la obra a modificar: ");
+        int id = sc.nextInt();
+        sc.nextLine();
+        
+        ObraDeArte obra = obrasPorId.get(id);
+        if (obra != null){
+            int antiguedad = obra.calcularAntiguedad();
+            System.out.println("La antiguedad de la obra de arte es: " + antiguedad + "años");
+        }else{
+            System.out.println("ID de obra de arte no encontrado");
+        }
+        
+    }
+    
     @Override
     public void agregar() {
         System.out.println("\n--- Agregar Nueva Obra de Arte ---");
@@ -159,6 +180,6 @@ public class MenuObrasDeArte implements MenuActions {
         } else {
         System.out.println("Nombre de obra de arte no encontrado.");
     }
-
-    }
+    
+    }  
 }

@@ -31,6 +31,7 @@ public class Fotografo extends Artista {
     @Override
     public String toString() {
         return "Nombre fotografo: " + getNombre() + "\n" + "Nacionalidad: " 
-                + getNacionalidad() + "\n" + "Tipo de fotografia: " + tipoFotografia + "\n";
+                + getNacionalidad() + "\n" + "Tipo de fotografia: " + tipoFotografia + "\n"
+                + "Tipo de artista: " + getTipo();
     }
 }

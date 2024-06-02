@@ -7,7 +7,6 @@ public abstract class Artista extends Persona{
     
     //Atributos
     private String nacionalidad; 
-    static String tipo;
     private List<ObraDeArte> obrasDeArte;
     
     //Constructor vacio

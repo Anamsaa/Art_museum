@@ -31,7 +31,8 @@ public class Pintor extends Artista {
     public String toString() {
         return "Nombre del pintor: " + getNombre() + "\n" 
                 + "Nacionalidad: " + getNacionalidad() + "\n" 
-                + "Estilo predominante: " + estiloPredominante + "\n";
+                + "Estilo predominante: " + estiloPredominante + "\n"
+                + "Tipo de artista: " + getTipo();
     }
 }
 

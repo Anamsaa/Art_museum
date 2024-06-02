@@ -30,7 +30,10 @@ public class Escultor extends Artista {
 
     @Override
     public String toString() {
-        return "Nombre escultor: " + getNombre() + "\n" + "Nacionalidad: " + getNacionalidad() + "\n" + "Material Preferido: " + materialPreferido + "\n";
+        return "Nombre escultor: " + getNombre() + "\n" 
+                + "Nacionalidad: " + getNacionalidad() + "\n" 
+                + "Material Preferido: " + materialPreferido + "\n"
+                + "Tipo de artista: " + getTipo();
     }
     
 }
