@@ -13,6 +13,10 @@ public class MenuArtistas implements MenuActions {
     private Scanner sc = new Scanner(System.in);
     //Declaro una variable para el id del artista
     private int artistaCounter = 1;
+    
+    //Constructores 
+    public MenuArtistas(){
+    }
 
     public void iniciar() {
         while (true) {

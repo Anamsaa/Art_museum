@@ -5,11 +5,15 @@ import java.util.*;
 import obradearte.*;
 
 public class MenuObrasDeArte implements MenuActions {
-    private final Map<Integer, ObraDeArte> obrasPorId = new HashMap<>();
-    private final Map<String, ObraDeArte> obrasPorNombre = new HashMap<>();
-    private final Scanner sc = new Scanner(System.in);
+    
+    private Map<Integer, ObraDeArte> obrasPorId = new HashMap<>();
+    private Map<String, ObraDeArte> obrasPorNombre = new HashMap<>();
+    private Scanner sc = new Scanner(System.in);
     private int obraCounter = 1;
-
+    
+    public MenuObrasDeArte(){
+    }
+    
     public void iniciar() {
         while (true) {
             System.out.println("\n--- Menu de Obras de Arte ---");
