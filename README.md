@@ -8,7 +8,8 @@ Introducción a los paquetes y sus respectivas clases:
    * Acompañado de un archivo txt, que permite probar el tratamiento de ficheros.
    
 2. **excepciones**
-   
+   * Manejo de excepcion personalizada.
+
 3. **menu**
     * La interfaz **_MenuActions_** que implementa los métodos: agregar, listar, modificar, eliminar y buscar a las  clases **MenuArtistas y MenuObrasDeArte.**
     * La clase **_MenuArtistas_** permite realizar la búsqueda y registro de Artistas tanto por su ID asignado como por nombre.
@@ -32,3 +33,5 @@ Introducción a los paquetes y sus respectivas clases:
    
 
 ¿Estás preparado para vivir la experiencia dentro de este museo? 
+![👮🏽_♂️](https://github.com/Anamsaa/Art_museum/assets/147981377/01c0a4fb-2b2d-4be1-a01d-7d6d1ce4e0b3)
+
