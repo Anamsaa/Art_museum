@@ -19,18 +19,24 @@ public abstract class Artista extends Persona{
         this.nacionalidad = nacionalidad; 
         this.obrasDeArte = obrasDeArte; 
     }
-
+    
+    //Getters y setters 
     public String getNacionalidad() {
         return nacionalidad;
+    }
+    
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    public List<ObraDeArte> getObrasDeArte(){
+        return obrasDeArte; 
     }
     
 //    public void agregarObraDeArte(ObraDeArte obra){
 //        obrasDeArte.add(obra); 
 //    }
 //    
-    public List<ObraDeArte> getObrasDeArte(){
-        return obrasDeArte; 
-    }
     
     //Métodos abstractos 
     public abstract String getTipo();

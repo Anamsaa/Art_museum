@@ -4,9 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Fotografo.java</file>
-            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/artmuseum/Main.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/obradearte/ObraDeArte.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/menu/MenuArtistas.java</file>
             <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/excepciones/NotFoundException.java</file>
             <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Celador.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Escultor.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Visitante.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Persona.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/menu/MenuActions.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/artmuseum/Main.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Pintor.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/persona/Artista.java</file>
+            <file>file:/C:/Users/34642/Documents/NetBeansProjects/artmuseum/src/menu/MenuObrasDeArte.java</file>
         </group>
     </open-files>
 </project-private>

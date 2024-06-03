@@ -1,5 +1,6 @@
 package menu;
 
+import excepciones.NotFoundException;
 import persona.*;
 import java.util.*; 
 
@@ -24,7 +25,7 @@ public class MenuArtistas implements MenuActions {
             System.out.println("6. Volver al Menu Principal");
             System.out.print("Elige una opción: ");
             
-            int opcion = sc.nextInt();
+            int opcion = comprobarInt();
             sc.nextLine();
 
             switch (opcion) {
@@ -109,32 +110,21 @@ public class MenuArtistas implements MenuActions {
             System.out.print("Nueva nacionalidad del artista (dejar en blanco para no cambiar): ");
             String nuevaNacionalidad = sc.nextLine();
 
-            if (!nuevoNombre.isEmpty()) {
+            if(!nuevoNombre.isEmpty()){
                 artistasPorNombre.remove(artista.getNombre().toLowerCase());
-                try {
-                    java.lang.reflect.Field nombreField = Artista.class.getDeclaredField("nombre");
-                    nombreField.setAccessible(true);
-                    nombreField.set(artista, nuevoNombre);
-                    artistasPorNombre.put(nuevoNombre.toLowerCase(), artista);
-                } catch (NoSuchFieldException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
+                artista.setNombre(nuevoNombre);
+                artistasPorNombre.put(nuevoNombre.toLowerCase(), artista); 
             }
-            if (!nuevaNacionalidad.isEmpty()) {
-                try {
-                    java.lang.reflect.Field nacionalidadField = Artista.class.getDeclaredField("nacionalidad");
-                    nacionalidadField.setAccessible(true);
-                    nacionalidadField.set(artista, nuevaNacionalidad);
-                } catch (NoSuchFieldException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
+            
+            if(!nuevaNacionalidad.isEmpty()){
+                artista.setNacionalidad(nuevaNacionalidad);
             }
             System.out.println("Artista modificado correctamente.");
         } else {
-            System.out.println("ID de artista no encontrado.");
+            System.out.println("ID de artista no encontrado");
         }
     }
-
+    
     @Override
     public void eliminar() {
         System.out.println("\n--- Eliminar Artista ---");
@@ -168,5 +158,30 @@ public class MenuArtistas implements MenuActions {
 
     public Map<Integer, Artista> getArtistas() {
         return artistasPorId;
+    }
+    
+    static int comprobarInt(){
+        Scanner sc = new Scanner(System.in);
+        int num = 0; 
+        boolean valido; 
+        do{
+            try{
+                num = sc.nextInt();
+                sc.nextLine(); 
+                if(num < 1 || num > 6) throw new NotFoundException();
+                valido = true;
+            }catch(InputMismatchException e){
+                System.err.println("Inserte un numero valido");
+                valido = false;
+                sc.next();
+            }catch(NotFoundException e){
+                System.err.println(e.getMessage());
+                System.err.println("Inserte un numero valido");
+                valido = false;
+                sc.next();
+            }  
+        } while(!valido);
+        
+        return num;          
     }
 }

@@ -59,8 +59,9 @@ public class Main {
             }catch(InputMismatchException e){
                 System.err.println("Inserte un numero valido");
                 valido = false;
+                sc.next();
             }catch(NotFoundException e){
-                System.err.println("Esta opcion no esta disponible");
+                System.err.println(e.getMessage());
                 System.err.println("Inserte un numero valido");
                 valido = false;
                 sc.next();

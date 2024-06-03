@@ -1,5 +1,6 @@
 package menu;
 
+import excepciones.NotFoundException;
 import java.util.*;
 import obradearte.*;
 
@@ -21,7 +22,7 @@ public class MenuObrasDeArte implements MenuActions {
             System.out.println("7. Volver al Menu Principal");
             System.out.print("Elige una opcion: ");
 
-            int opcion = sc.nextInt();
+            int opcion = comprobarInt();
             sc.nextLine();
 
             switch (opcion) {
@@ -179,7 +180,31 @@ public class MenuObrasDeArte implements MenuActions {
             System.out.println("Obra de arte encontrada: " + obra);
         } else {
         System.out.println("Nombre de obra de arte no encontrado.");
-    }
-    
+        }
     }  
+    
+    static int comprobarInt(){
+        Scanner sc = new Scanner(System.in);
+        int num = 0; 
+        boolean valido; 
+        do{
+            try{
+                num = sc.nextInt();
+                sc.nextLine(); 
+                if(num < 1 || num > 7) throw new NotFoundException();
+                valido = true;
+            }catch(InputMismatchException e){
+                System.err.println("Inserte un numero valido");
+                valido = false;
+                sc.next();
+            }catch(NotFoundException e){
+                System.err.println(e.getMessage());
+                System.err.println("Inserte un numero valido");
+                valido = false;
+                sc.next();
+            }  
+        } while(!valido);
+        
+        return num;          
+    }
 }

@@ -3,7 +3,7 @@ package excepciones;
 public class NotFoundException extends Exception {
     
     public NotFoundException(){
-        super("Opción no encontrada"); 
+        super("Esta opcion no esta disponible :("); 
     }
     
     public NotFoundException(String message){
