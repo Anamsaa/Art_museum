@@ -30,6 +30,7 @@ public class MenuArtistas implements MenuActions {
             System.out.print("Elige una opción: ");
             
             int opcion = comprobarInt();
+            System.out.println("Presiona enter para continuar");
             sc.nextLine();
 
             switch (opcion) {

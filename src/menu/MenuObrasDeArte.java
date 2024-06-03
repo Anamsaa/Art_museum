@@ -27,6 +27,7 @@ public class MenuObrasDeArte implements MenuActions {
             System.out.print("Elige una opcion: ");
 
             int opcion = comprobarInt();
+            System.out.println("Presiona enter para continuar");
             sc.nextLine();
 
             switch (opcion) {
@@ -49,7 +50,7 @@ public class MenuObrasDeArte implements MenuActions {
         
         System.out.println("Calcule la antiguedad de una obra de arte: ");
         listar();
-        System.out.print("Introduce el ID de la obra a modificar: ");
+        System.out.print("Introduce el ID para conocer la antiguedad de la obra: ");
         int id = sc.nextInt();
         sc.nextLine();
         
