@@ -33,5 +33,5 @@ Introducción a los paquetes y sus respectivas clases:
    
 
 ¿Estás preparado para vivir la experiencia dentro de este museo? 
-![👮🏽_♂️](https://github.com/Anamsaa/Art_museum/assets/147981377/01c0a4fb-2b2d-4be1-a01d-7d6d1ce4e0b3)
 
+![image](https://github.com/Anamsaa/Art_museum/assets/147981377/8372b339-0cf0-4ab5-8fe1-e10642abaf0f)
