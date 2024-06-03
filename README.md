@@ -8,7 +8,7 @@ Introducción a los paquetes y sus respectivas clases:
    * Acompañado de un archivo txt, que permite probar el tratamiento de ficheros.
    
 2. **excepciones**
-   * Manejo de excepcion personalizada.
+   * Manejo de excepción personalizada.
 
 3. **menu**
     * La interfaz **_MenuActions_** que implementa los métodos: agregar, listar, modificar, eliminar y buscar a las  clases **MenuArtistas y MenuObrasDeArte.**
